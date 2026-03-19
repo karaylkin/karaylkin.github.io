@@ -5,3 +5,10 @@ document.querySelectorAll('.subject-toggle').forEach(btn => {
     btn.nextElementSibling.style.display = expanded ? 'none' : 'block';
   });
 });
+
+// Auto-open first subject on load
+const firstToggle = document.querySelector('.subject-toggle');
+if (firstToggle && firstToggle.getAttribute('aria-expanded') !== 'true') {
+  firstToggle.setAttribute('aria-expanded', 'true');
+  firstToggle.nextElementSibling.style.display = 'block';
+}
