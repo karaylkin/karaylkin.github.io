@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Обо мне — Портфолио</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <div class="top-bar">
+    <a href="../" class="back-btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+      На главную
+    </a>
+    <nav class="page-nav">
+      <a href="../about/" class="active">Обо мне</a>
+      <a href="../course-1/">1 курс</a>
+      <a href="../course-2/">2 курс</a>
+      <a href="../course-3/">3 курс</a>
+      <a href="../course-4/">4 курс</a>
+    </nav>
+  </div>
+
+  <main class="page-content">
+    <div class="about-card">
+      <div class="about-photo-wrap">
+        <img src="../images/photo.jpg" alt="Фото" class="about-photo"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+        <div class="about-photo-placeholder">
+          <svg viewBox="0 0 80 80" fill="none"><circle cx="40" cy="30" r="18" fill="#3b4168"/><ellipse cx="40" cy="72" rx="28" ry="16" fill="#3b4168"/></svg>
+        </div>
+      </div>
+      <div class="about-info">
+        <h1 class="about-name">Радмир Ибрагимов</h1>
+        <p class="about-role">Студент · Специальность · РГПУ им. А.&nbsp;И.&nbsp;Герцена</p>
+        <div class="about-contacts">
+          <a href="https://github.com/karaylkin" class="contact-btn github" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub
+          </a>
+          <a href="radmir-lbragimov@mail.ru" class="contact-btn email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+            radmir-lbragimov@mail.ru
+          </a>
+        </div>
+        <p class="about-bio">Студент 4 курса, факультет информатики и вычислительной техники.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 · РГПУ им. А.&nbsp;И.&nbsp;Герцена · Радмир Ибрагимов</p>
+  </footer>
+
+</body>
+</html>
