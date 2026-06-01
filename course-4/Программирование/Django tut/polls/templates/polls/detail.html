@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>{{ question.question_text }}</title>
+    <link rel="stylesheet" href="{% static 'polls/style.css' %}" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>Django Polls</h1>
+      <p class="tagline">Vote on a question</p>
+    </header>
+
+    <main>
+      <h2>{{ question.question_text }}</h2>
+
+      {% if error_message %}
+        <p class="error"><strong>{{ error_message }}</strong></p>
+      {% endif %}
+
+      <form action="{% url 'polls:vote' question.id %}" method="post">
+        {% csrf_token %}
+        <ul class="choice-list">
+          {% for choice in question.choice_set.all %}
+            <li>
+              <label>
+                <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}" />
+                {{ choice.choice_text }}
+              </label>
+            </li>
+          {% endfor %}
+        </ul>
+        <button type="submit">Vote</button>
+      </form>
+    </main>
+  </body>
+</html>
+
+
+

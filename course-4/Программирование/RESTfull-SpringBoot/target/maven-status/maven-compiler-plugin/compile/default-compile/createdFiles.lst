@@ -1,0 +1,6 @@
+com\example\taskmanagement\config\SecurityConfig.class
+com\example\taskmanagement\model\Task.class
+com\example\taskmanagement\TaskManagementSystemApplication.class
+com\example\taskmanagement\repository\TaskRepository.class
+com\example\taskmanagement\exception\ResourceNotFoundException.class
+com\example\taskmanagement\controller\TaskController.class

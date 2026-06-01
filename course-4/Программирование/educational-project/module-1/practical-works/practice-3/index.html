@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game: IT Термины</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Memory Game: IT Термины</h1>
+            <p>Найди пары: Термин и его Определение</p>
+        </header>
+
+        <!-- Start Screen -->
+        <section id="start-screen" class="screen active">
+            <div class="card-panel">
+                <h2>Правила игры</h2>
+                <p>Переворачивайте карточки, чтобы найти пары. Пара состоит из <strong>Термина</strong> и соответствующего ему <strong>Определения</strong>.</p>
+                <p>Чем быстрее вы справитесь и чем меньше ходов сделаете, тем больше очков получите!</p>
+                
+                <div class="difficulty-selector">
+                    <h3>Выберите сложность:</h3>
+                    <div class="difficulty-btns">
+                        <button class="btn" data-difficulty="easy">Легко (4x3)</button>
+                        <button class="btn" data-difficulty="hard">Сложно (4x4)</button>
+                    </div>
+                </div>
+
+                <div class="high-scores-preview">
+                    <h3>Рекорды</h3>
+                    <ul id="high-scores-list-preview">
+                        <li>Пока нет рекордов</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Game Screen -->
+        <section id="game-screen" class="screen">
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <span class="label">Время:</span>
+                    <span id="timer" class="value">00:00</span>
+                </div>
+                <div class="stat-item">
+                    <span class="label">Ходы:</span>
+                    <span id="moves" class="value">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="label">Очки:</span>
+                    <span id="score" class="value">0</span>
+                </div>
+                <button id="restart-btn-game" class="btn-small">Заново</button>
+            </div>
+
+            <div id="game-board" class="game-board">
+                <!-- Cards will be generated here -->
+            </div>
+        </section>
+
+        <!-- Result Screen -->
+        <section id="result-screen" class="screen">
+            <div class="card-panel result-panel">
+                <h2>Победа!</h2>
+                <div class="final-stats">
+                    <p>Время: <span id="final-time">00:00</span></p>
+                    <p>Ходы: <span id="final-moves">0</span></p>
+                    <p class="final-score">Итоговый счет: <span id="final-score">0</span></p>
+                </div>
+                
+                <div id="new-record-msg" class="hidden">🎉 Новый рекорд! 🎉</div>
+
+                <div class="actions">
+                    <button id="home-btn" class="btn">В меню</button>
+                    <button id="restart-btn-result" class="btn">Играть снова</button>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

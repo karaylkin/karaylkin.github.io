@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Все голосования{% endblock %}
+
+{% block content %}
+<h2>Все голосования</h2>
+<div style="margin-top: 20px;">
+    {% for poll in polls %}
+    <div style="background: #f8f9fa; padding: 20px; margin-bottom: 15px; border-radius: 8px; border-left: 4px solid #667eea;">
+        <h3 style="color: #333; margin-bottom: 10px;">{{ poll.question }}</h3>
+        <p style="color: #666; font-size: 0.9em;">
+            Дата создания: {{ poll.pub_date|date:"d.m.Y H:i" }} | 
+            Всего голосов: {{ poll.total_votes }}
+        </p>
+    </div>
+    {% empty %}
+    <p style="text-align: center; color: #666; padding: 40px;">
+        Голосования пока не созданы. Создайте их через <a href="/admin/">админ-панель</a>.
+    </p>
+    {% endfor %}
+</div>
+{% endblock %}
+

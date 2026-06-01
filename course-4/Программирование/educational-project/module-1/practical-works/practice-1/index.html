@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Алгоритмы сортировки: Пузырьковая сортировка</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Алгоритмы сортировки</h1>
+            <p>Изучаем основы алгоритмизации на примере сортировки пузырьком</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#theory">Теория</a></li>
+                <li><a href="#definitions">Определения</a></li>
+                <li><a href="#examples">Примеры</a></li>
+                <li><a href="#tasks">Задания</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        
+        <section id="theory" class="card">
+            <h2>Что такое сортировка пузырьком?</h2>
+            <p>
+                <strong>Сортировка пузырьком (Bubble Sort)</strong> — это простой алгоритм сортировки, который многократно проходит по списку, сравнивает соседние элементы и меняет их местами, если они стоят в неправильном порядке. Проход по списку повторяется до тех пор, пока список не будет отсортирован.
+            </p>
+            <p>
+                Алгоритм получил свое название из-за того, что меньшие элементы постепенно "всплывают" в начало списка, как пузырьки воздуха в воде, а большие "тонут" в конце.
+            </p>
+        </section>
+
+        <section id="definitions" class="card">
+            <h2>Основные понятия</h2>
+            <dl>
+                <dt>Алгоритм</dt>
+                <dd>Набор инструкций, описывающих порядок действий исполнителя для достижения некоторого результата.</dd>
+                
+                <dt>Сложность алгоритма</dt>
+                <dd>Зависимость объема работы, выполняемой алгоритмом, от размера входных данных. Для пузырьковой сортировки это O(n²).</dd>
+                
+                <dt>Итерация</dt>
+                <dd>Единичное повторение действия. В контексте сортировки — один проход по массиву.</dd>
+            </dl>
+        </section>
+
+        <section id="examples" class="card">
+            <h2>Интерактивные примеры</h2>
+            
+            <div class="example-block">
+                <h3>Пример 1: Визуализация процесса</h3>
+                <p>Нажмите кнопку, чтобы увидеть, как меняются местами элементы [5, 1, 4, 2, 8] за один проход.</p>
+                <div id="visualization-area">
+                    <div class="array-item">5</div>
+                    <div class="array-item">1</div>
+                    <div class="array-item">4</div>
+                    <div class="array-item">2</div>
+                    <div class="array-item">8</div>
+                </div>
+                <button id="animate-btn" class="btn">Запустить шаг сортировки</button>
+            </div>
+
+            <div class="example-block">
+                <h3>Пример 2: Код на Python</h3>
+                <pre><code>
+def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n-i-1):
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+                </code></pre>
+            </div>
+        </section>
+
+        <section id="tasks" class="card">
+            <h2>Задания для самопроверки</h2>
+            
+            <div class="task-item">
+                <h3>Вопрос 1</h3>
+                <p>Какова временная сложность сортировки пузырьком в худшем случае?</p>
+                <button class="toggle-answer-btn btn-outline">Показать ответ</button>
+                <div class="answer hidden">
+                    <p>O(n²), где n — количество элементов.</p>
+                </div>
+            </div>
+
+            <div class="task-item">
+                <h3>Вопрос 2</h3>
+                <p>Что происходит, если массив уже отсортирован?</p>
+                <button class="toggle-answer-btn btn-outline">Показать ответ</button>
+                <div class="answer hidden">
+                    <p>В классической реализации алгоритм все равно выполнит все сравнения (O(n²)). Оптимизированная версия может остановиться за O(n).</p>
+                </div>
+            </div>
+
+            <div class="task-item">
+                <h3>Вопрос 3</h3>
+                <p>Является ли этот алгоритм устойчивым (stable)?</p>
+                <button class="toggle-answer-btn btn-outline">Показать ответ</button>
+                <div class="answer hidden">
+                    <p>Да, так как он не меняет местами равные элементы.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Учебный проект. Автор:Аннануров Даниил Петрович Студент курса 4 ИВТ 1.2.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

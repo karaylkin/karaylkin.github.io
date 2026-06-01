@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест: Основы JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Тест: Основы JavaScript</h1>
+            <p>Проверьте свои знания базового синтаксиса и концепций JS</p>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <!-- Стартовый экран -->
+        <section id="start-screen" class="card">
+            <h2>Добро пожаловать!</h2>
+            <p>Вам предстоит ответить на 10 вопросов по основам языка программирования JavaScript.</p>
+            <ul class="rules-list">
+                <li>В тесте встречаются вопросы с одиночным и множественным выбором, а также ввод текста.</li>
+                <li>Время на выполнение не ограничено, но есть таймер для интереса.</li>
+                <li>После завершения вы увидите свой результат и разбор ошибок.</li>
+            </ul>
+            <button id="start-btn" class="btn">Начать тест</button>
+        </section>
+
+        <!-- Экран теста -->
+        <section id="quiz-screen" class="card hidden">
+            <div class="quiz-header">
+                <div class="timer">Время: <span id="time">00:00</span></div>
+                <div class="progress-container">
+                    <div class="progress-label">Вопрос <span id="current-question-num">1</span> из <span id="total-questions">10</span></div>
+                    <div class="progress-bar">
+                        <div id="progress-fill" class="progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="question-container">
+                <!-- Сюда будет рендериться вопрос -->
+            </div>
+
+            <div class="controls">
+                <button id="next-btn" class="btn" disabled>Ответить</button>
+            </div>
+        </section>
+
+        <!-- Экран результатов -->
+        <section id="result-screen" class="card hidden">
+            <h2>Результаты теста</h2>
+            <div class="score-block">
+                <div class="score-circle">
+                    <span id="score-percent">0%</span>
+                </div>
+                <p>Вы набрали <span id="score-points">0</span> из <span id="score-total">10</span> баллов</p>
+            </div>
+            
+            <div id="feedback-message" class="feedback-message"></div>
+
+            <div class="actions">
+                <button id="restart-btn" class="btn">Пройти заново</button>
+                <button id="review-btn" class="btn btn-outline">Посмотреть ошибки</button>
+            </div>
+
+            <div id="review-container" class="hidden">
+                <h3>Разбор ответов:</h3>
+                <div id="review-list"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Учебный проект. Практическая работа №2.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

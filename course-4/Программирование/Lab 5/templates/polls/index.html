@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Список опросов{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h1>Опросы</h1>
+    <a class="btn btn-primary" href="{% url 'polls:poll_create' %}">Создать опрос</a>
+</div>
+
+{% if questions %}
+    <ul class="list-group">
+        {% for q in questions %}
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <div>
+                    <a href="{% url 'polls:detail' q.pk %}">{{ q.question_text }}</a><br>
+                    <small class="text-muted">Опубликован: {{ q.pub_date|date:"d.m.Y H:i" }}</small>
+                </div>
+                {% if q.author %}
+                    <span class="badge bg-secondary">Автор: {{ q.author.username }}</span>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>Пока нет ни одного опроса.</p>
+{% endif %}
+{% endblock %}
+
+

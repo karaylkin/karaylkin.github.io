@@ -1,0 +1,12 @@
+{
+  "name": "task-management-e2e",
+  "version": "1.0.0",
+  "description": "E2E tests for Task Management System",
+  "scripts": {
+    "test": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "typescript": "^5.0.0"
+  }
+}
